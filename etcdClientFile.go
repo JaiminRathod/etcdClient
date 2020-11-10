@@ -29,3 +29,7 @@ func get_from_db(context context.Context,client *clientv3.Client,key string) (st
 	resp,err:=client.Get(context,key)
 	return string(resp.Kvs[0].Value), err
 }
+
+func dummy() {
+	fmt.Println("Cool")
+}
